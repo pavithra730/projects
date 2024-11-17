@@ -11,6 +11,7 @@
     padding: 0px;
     margin: 0px;   
     position: relative;
+    right: 0;
 }
 .sub-container{
     padding: 10px;
@@ -18,7 +19,7 @@
     height: 80vh;
     position: absolute;
     left: 25%;
-    top: 12%;
+    top: 5%;
     border-radius: 10px;
     border: 2px solid rgba(189, 189, 193, 0.421);
 }
@@ -151,4 +152,29 @@ font-weight: normal;}
     font-size: 28px;
     padding: 0;
     margin: 0;
+}
+@media screen and (min-width:250px){
+   
+    .container{
+        width: 90%;
+        position: relative;
+        left: 55px;
+        right: 5px;
+    }
+    .sub-container{
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        left: 0;
+    }
+    .lcons{
+        width: 100%;
+        left: 0;
+    }
+    .pass1{
+        color: rgb(18, 141, 229);
+        padding-bottom: 5px;
+        position: absolute;
+        top: 78px;
+    }
 }
