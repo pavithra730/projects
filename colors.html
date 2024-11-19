@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color changing</title>
+    <link rel="stylesheet" href="colors.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="change()">Change Color ?</button>
+    </div>
+
+    <script>
+       let index=0;
+
+       function change(){
+        let colors=['green','yellow','orange','blue','grey'];
+        document.getElementsByTagName("body")[0].
+        style.background = colors[index++];
+
+        if(index>colors.length-1){
+            index=0
+        }
+       }
+    </script>
+</body>
+</html>
