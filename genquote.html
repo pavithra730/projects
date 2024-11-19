@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generater</title>
+    <link rel="stylesheet" href="genquote.css">
+</head>
+<body>
+    <div class="container">
+        <div class="myqt">
+            <h2 id="qt">My quotes</h2>
+            <h3 id="at">-Author</h3>
+        </div>
+        <button onclick="gen()">Generate Quote</button>
+    </div>
+
+    <script>
+        function gen(){
+
+            let quotes = {
+                "- Terry Pratchett":'"The first draft is just you telling yourself the story."',
+                "- Stephen Chbosky":'"Even if we dont have the power to choose where we come from, we can still choose where we go from there."',
+                "- Albert Einstein":'"Anyone who has never made a mistake has never tried anything new."',
+                "- C.S. Lewis":'"Dont let your happiness depend on something you may lose."',
+                "- John Green":'"It hurt because it mattered."',
+                "- ​Robert Ingersoll":'"We rise by lifting others."',
+                "- Paula Coelho":'"Straight roads do not make skillful drivers."',
+                "- Confucius":'“It does not matter how slowly you go as long as you do not stop.”',
+                "- Buddha":' “What we think, we become.”'
+            };
+            let authors = Object.keys(quotes);
+            let author = authors[Math.floor(Math.random()*authors.length)];
+            var Quote = quotes[author];
+
+            document.getElementById('qt').innerHTML=Quote;
+            document.getElementById('at').innerHTML=author;
+        }
+    </script>
+
+    
+</body>
+</html>

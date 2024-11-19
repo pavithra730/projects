@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    margin: auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.myqt{
+    border: 10px solid rgb(46, 45, 45);
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: violet;
+       
+}
+.myqt h2,h3{
+    padding: 20px;
+}
+.myqt h2{
+    font-size: 29px;
+    width: 100%;
+}
+.myqt h3{
+    padding-left: 40%;
+   
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: rgb(169, 137, 10);
+    color: white;
+    font-size: 25px;
+}
+button:hover{
+    background-color: rgb(212, 173, 17);;
+
+}
