@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Message</title>
+    <link rel="stylesheet" href="passmsg.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container">
+        <div class="msgcont">
+            <p><h3>Pass The Message</h3></p>
+            <p style="border-bottom: 1px solid rgba(180, 178, 178, 0.801);"></p>
+            <p class="labl"><label for="msg-input">Enter The Message:</label></p>
+            <div class="msgs">
+                <button><i class="material-icons">mail</i></button>
+            <input type="text" id="msg-input">
+            </div>
+            
+            <p id="msg-output"></p>
+            <button onclick="msg()" class="subm">Submit</button>
+        </div>
+    </div>
+    <script>
+        const msginput = document.getElementById('msg-input');
+        
+        msginput.addEventListener("keydown",function(event){
+            if(event.key == "Enter"){
+                msg();
+            }
+        })
+        
+        function msg(){
+            document.getElementById('msg-output').innerHTML=msginput.value;
+            msginput.value='';
+        }
+    </script>
+
+    
+
+
+
+    
+</body>
+</html>
