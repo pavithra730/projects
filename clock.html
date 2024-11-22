@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <h1 id="day">Mon</h1>
+            <h1 id="hour">7</h1>
+            <h1 id="col">:</h1>
+            <h1 id="minute">22</h1>
+            <h1 id="ampm">am</h1>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load',showtime)
+        function showtime(){
+            var date = new Date();
+            var day = date.getDay();
+            var hour = date.getHours();
+            var mins = date.getMinutes();
+            hour=hour<10?'0'+hour:hour;
+            mins=mins<10?'0'+mins:mins;
+            var days = ['sun','mon','tues','wed','thurs','fri','satur']
+            document.getElementById('day').innerHTML=days[day];
+            document.getElementById('hour').innerHTML=hour;
+            document.getElementById('minute').innerHTML=mins; 
+            var ampm=hour<12?'AM':'PM'  
+            document.getElementById('ampm').innerHTML=ampm ;    
+            
+        }
+        setInterval(time,200)
+        
+    </script>
+</body>
+</html>
+
