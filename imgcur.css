@@ -1,0 +1,32 @@
+.imgs{
+ border: 1px solid black;
+
+ height: auto;
+ display: none;
+ text-align: center;
+ padding: 10px;
+
+   
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+    
+}
+i{
+    display: flex;
+    flex-direction: row;
+    border:1px solid blaack ;
+}
+.icons{
+    margin: 5px;
+    padding: 10px;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="imgcur.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <div class="container">
+        <div class="imgs">
+            <img src="images/sco3.jpg" alt="" width="500px">
+        </div>
+        <div class="imgs">
+            <img src="images/sco4.jpg" alt="" width="500px">
+        </div>
+        <div class="imgs">
+            <img src="images/sco5.jpg" alt="" width="500px">
+        </div>
+        <div class="imgs">
+            <img src="images/sco1.webp" alt="" width="500px">
+        </div>
+        <div class="icons">
+            <i class="material-icons" onclick="display(-1)">arrow_back_ios</i>
+            <i class="material-icons" onclick="display(1)">arrow_forward_ios</i>
+
+        </div>
+       
+    </div>
+
+    <script>
+        var index=0;
+        display(index)
+        function display(i){
+            index+=i;
+            var imgs = document.getElementsByClassName("imgs")
+            for(i=0;i<imgs.length;i++){
+                imgs[i].style.display="none";
+            }
+            if(index<0){
+                index=imgs.length-1
+            }
+            if(index>imgs.length-1){
+                index=0;
+            }
+            imgs[index].style.display="block";
+        }
+    </script>
+</body>
+</html>
